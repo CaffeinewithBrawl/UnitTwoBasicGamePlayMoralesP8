@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;
     public float xRange = 20.0f;
     public float yRange = 10.0f;
+    public Transform projectileSpawnPoint;
 
     public GameObject projectilePrefab;
 
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour
         // to shoot sandwich
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
 
         }
     }
